@@ -1,0 +1,719 @@
+<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="../../images/js/api-about.png"/><link rel="preload" as="image" href="../../images/js/api-2way-lib.png"/><link rel="preload" as="image" href="../../images/js/api-2way-json.png"/><link rel="modulepreload" href="/assets/manifest-28150284.js"/><link rel="modulepreload" href="/assets/entry.client-DtWayQEr.js"/><link rel="modulepreload" href="/assets/root-D-3MPHUJ.js"/><link rel="modulepreload" href="/assets/entry.client-DtWayQEr.js"/><link rel="modulepreload" href="/assets/lessons._slug-3tazfXQY.js"/><link rel="modulepreload" href="/assets/mermaid-vendor-DrE10C42.js"/><link rel="modulepreload" href="/assets/lessons-aJB9EY67.js"/><meta name="robots" content="noindex"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Lessons</title><meta name="robots" content="index,follow"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="icon" href="https://g-s.dev/uploads/cropped-g-s_fabicon-2-32x32.png" sizes="32x32"/><link rel="icon" href="https://g-s.dev/uploads/cropped-g-s_fabicon-2-192x192.png" sizes="192x192"/><link rel="apple-touch-icon" href="https://g-s.dev/uploads/cropped-g-s_fabicon-2-180x180.png"/><link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="/assets/root-1fdZ39K0.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"/><script>
+              window.Prism = window.Prism || {};
+              window.Prism.manual = true;
+            </script></head><body style="font-family:&#x27;M PLUS 1p&#x27;"><div class="relative from-slate-200 bg-gradient-to-b to-slate-300"><div class="grid transition-all duration-300 ease-in-out" style="grid-template-columns:280px 1fr"><aside class="h-screen sticky top-0 transition-all duration-300 ease-in-out w-[280px] pr-4 overflow-hidden border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-slate-800 px-4"><div class="py-2"><div class="flex items-center justify-between mb-3"><h2 class="text-sm font-semibold transition-opacity duration-300 ease-in-out opacity-100">授業資料一覧</h2><button class="p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded transition-colors duration-200" title="折りたたみ"><svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button></div><div class="mb-3 px-2"><button class="flex items-center gap-2 w-full text-xs text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200 py-2 px-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700" title="全て開く"><svg class="w-3 h-3 transition-transform duration-200 " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg><span>全て開く</span></button></div><nav class="space-y-1 transition-opacity duration-300 ease-in-out opacity-100"></nav></div></aside><main class="prose dark:prose-invert max-w-none bg-white dark:bg-slate-800 rounded w-5xl p-12 my-4 
+  mx-auto"><div class="relative"><div style="display:block"><h1 class="text-3xl font-extrabold mb-4 text-slate-900 dark:text-slate-100 border-b border-slate-200 dark:border-slate-700 pb-2">#04 JavaScript - WebAPI・Gemini API</h1>
+<div class="my-6 p-4 rounded-lg border bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-700 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-gray-800 dark:text-gray-200">配布コード</div><div class="text-slate-700 dark:text-slate-300"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">zipファイルをダウンロード後に展開し、VSCodeで開いてください！</p><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">講義内資料: <a class="text-slate-600 dark:text-slate-400 underline underline-offset-2 hover:text-slate-800 dark:hover:text-slate-200 transition-colors" href="../../zip/js04.zip">js04.zip</a></li>
+</ul></div></div></div>
+<h2 class="text-2xl font-semibold mb-3 mt-12 text-slate-800 dark:text-slate-200">Web API</h2>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">Web APIとは</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">機能さえわかっていれば、 <strong class="font-semibold text-slate-900 dark:text-slate-100">中身の実際の動作はわからなくても外部から機能を呼び出すことができる仕組み</strong> の総称</li>
+<li class="relative ml-2">API（Application Programming Interface）をWeb技術（HTTP/HTTPS通信）で実現したもの が Web API</li>
+</ul><div class="my-6 "><div class="infographic-content"><div class="text-center max-w-full mx-auto"><div class="mb-2"><img src="../../images/js/api-about.png" alt="APIとは" class="w-full rounded"/></div></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">Web APIの利用方法</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">Web APIの使い方には2つのパターンが存在する</li>
+</ul><div class="my-6 "><div class="infographic-content"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="p-4 bg-blue-50 rounded border border-blue-200"><div class="flex items-center mb-3 justify-center"><div class="w-6 h-6 text-blue-600 mr-2"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h4a1 1 0 011 1v2h4a1 1 0 011 1v2a1 1 0 01-1 1h-1v9a2 2 0 01-2 2H6a2 2 0 01-2-2V8H3a1 1 0 01-1-1V5a1 1 0 011-1h4z"></path></svg></div><div class="font-medium text-blue-800">ライブラリ方式（リモコン型）</div></div><div class="mb-2 max-w-40 mx-auto rounded"><img src="../../images/js/api-2way-lib.png" alt="APIの使い方は2パターンある" class="w-full rounded"/></div><div class="text-sm text-blue-700"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong>特徴:</strong><br/>
+・リモコンみたいにボタンを押すだけ<br/>
+・すごく簡単で使いやすい<br/>
+・ただし、種類ごとに使い方が違う<br/>
+<strong>例:</strong> Firebase、Tone.js、Leaflet</p></div></div><div class="p-4 bg-green-50 rounded border border-green-200"><div class="flex items-center mb-3 justify-center"><div class="w-6 h-6 text-green-600 mr-2"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div><div class="font-medium text-green-800">HTTP/JSON方式（注文書型）</div></div><div class="mb-2 max-w-40 mx-auto rounded"><img src="../../images/js/api-2way-json.png" alt="APIの使い方は2パターンある" class="w-full rounded"/></div><div class="text-sm text-green-700"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong>特徴:</strong><br/>
+・注文書を書いて送る感じ<br/>
+・共通のルール（HTTP + JSON）<br/>
+・一度覚えれば、どんなAPIにも応用可能<br/>
+<strong>例:</strong> Google Books API、楽天API</p></div></div></div></div></div><div class="my-6 p-4 rounded-lg border bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-700 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-gray-800 dark:text-gray-200">FirebaseもAPIだ！</div><div class="text-slate-700 dark:text-slate-300"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">前の授業でやったFirebaseも<strong class="font-semibold text-slate-900 dark:text-slate-100">ライブラリ方式</strong>のAPIといえます！</p><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">// Firebase - ライブラリ方式の典型例
+import { getDatabase, ref, push } from &#x27;https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js&#x27;;
+
+const db = getDatabase();
+const usersRef = ref(db, &#x27;users&#x27;);
+push(usersRef, {
+  name: &#x27;太郎&#x27;,
+  age: 25
+});
+</code></pre></div></div><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">Firebaseは専用の関数（<code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">getDatabase()</code>, <code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">ref()</code>, <code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">push()</code>など）を使って簡単にデータベース操作ができましたよね。<br/>
+<!-- -->これがまさにライブラリ方式です！</p></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">Web API活用のメリット</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><div class="my-6 "><div class="infographic-content"><div class="space-y-3"><div class="flex items-start p-3 bg-slate-50 rounded border border-slate-200"><div class="w-6 h-6 text-green-600 mr-3 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><div><div class="font-medium text-slate-800">開発速度の向上</div><div class="text-sm text-slate-600">既存サービスを活用してMVP（最小価値製品）を爆速開発</div></div></div><div class="flex items-start p-3 bg-slate-50 rounded border border-slate-200"><div class="w-6 h-6 text-blue-600 mr-3 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path></svg></div><div><div class="font-medium text-slate-800">コスト削減</div><div class="text-sm text-slate-600">複雑な機能を一から開発する必要がない</div></div></div><div class="flex items-start p-3 bg-slate-50 rounded border border-slate-200"><div class="w-6 h-6 text-purple-600 mr-3 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg></div><div><div class="font-medium text-slate-800">高品質なサービス</div><div class="text-sm text-slate-600">専門企業が提供する高性能・高信頼性のサービスを利用</div></div></div></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold"><span class="inline-flex items-center px-2 mr-1 text-sm font-medium bg-slate-400 dark:bg-slate-400/30 text-slate-100 dark:text-slate-900 rounded-full h-full">補足</span> 同期処理と非同期処理</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">API通信は「非同期処理」で行われる</li>
+</ul><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong class="font-semibold text-slate-900 dark:text-slate-100">同期処理のイメージ：</strong></p><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">console.log(&quot;1番目の処理&quot;);
+console.log(&quot;2番目の処理&quot;); // 1番目が終わってから実行
+console.log(&quot;3番目の処理&quot;); // 2番目が終わってから実行
+</code></pre></div></div><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong class="font-semibold text-slate-900 dark:text-slate-100">非同期処理のイメージ：</strong></p><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">console.log(&quot;1番目の処理&quot;);
+setTimeout(() =&gt; {
+  console.log(&quot;2番目の処理（2秒後）&quot;);
+}, 2000);
+console.log(&quot;3番目の処理&quot;); // 2番目を待たずに即座に実行
+</code></pre></div></div><div class="my-6 p-4 rounded-lg border bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-blue-800 dark:text-blue-200">非同期処理の重要性</div><div class="text-slate-700 dark:text-slate-300"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">API通信は時間がかかるため、通信完了を待っている間に他の処理を実行できる非同期処理が重要です。<code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">.then()</code>や<code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">async/await</code>を使って「通信が完了したら」の処理を書きます。</p></div></div></div></div></details>
+<h2 class="text-2xl font-semibold mb-3 mt-12 text-slate-800 dark:text-slate-200">Axios（HTTP通信ライブラリ）</h2>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">Axiosとは</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">ウェブサイトと他のWebサービス（API）との「通訳」のような役割</li>
+<li class="relative ml-2">HTTPリクエストを簡単に送信できるJavaScriptライブラリ</li>
+</ul><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong class="font-semibold text-slate-900 dark:text-slate-100">導入方法：</strong></p><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-html !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+</code></pre></div></div><div class="my-6 p-4 rounded-lg border bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-green-800 dark:text-green-200">AxiosとjQueryの類似点</div><div class="text-slate-700 dark:text-slate-300"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">jQueryと同様にCDNから読み込むだけで使用できます。Live ServerやHTTPサーバー上で動作させる必要があります（<code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">file://</code>では動作しません）。</p></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">GETリクエスト（データを取得）</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">// 基本的なGETリクエスト
+axios.get(&#x27;https://api.example.com/users&#x27;)
+  .then(function(response) {
+    console.log(response.data);
+  })
+  .catch(function(error) {
+    console.log(&#x27;エラーが発生しました：&#x27;, error);
+  });
+
+// パラメータ付きのGETリクエスト
+axios.get(&#x27;https://api.example.com/search&#x27;, {
+  params: {
+    keyword: &#x27;検索キーワード&#x27;,
+    limit: 10
+  }
+})
+.then(function(response) {
+  console.log(response.data);
+});
+</code></pre></div></div><div class="my-6 p-4 rounded-lg border bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-blue-800 dark:text-blue-200">paramsとURLパラメータ</div><div class="text-slate-700 dark:text-slate-300"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">params</code>オプションは <code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">?keyword=検索キーワード&amp;limit=10</code> のようなURLパラメータを自動的に生成してくれます。手動でURLに追加する必要がありません。</p></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">POSTリクエスト（データを送信）</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">// データを送信するPOSTリクエスト
+axios.post(&#x27;https://api.example.com/submit&#x27;, {
+  title: &#x27;新しい記事&#x27;,
+  content: &#x27;これは新しい記事の内容です。&#x27;,
+  author: &#x27;投稿者名&#x27;
+})
+.then(function(response) {
+  console.log(&#x27;送信成功：&#x27;, response.data);
+})
+.catch(function(error) {
+  console.log(&#x27;エラーが発生しました：&#x27;, error);
+});
+</code></pre></div></div><div class="my-6 "><div class="infographic-content"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="p-4 bg-blue-50 rounded border border-blue-200"><div class="flex items-center mb-3"><div class="w-6 h-6 text-blue-600 mr-2"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path></svg></div><div class="font-medium text-blue-800">GET</div></div><div class="text-sm text-blue-700"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong>用途:</strong> データを「取得」<br/>
+<strong>例:</strong> 商品一覧、ユーザー情報の取得</p></div></div><div class="p-4 bg-green-50 rounded border border-green-200"><div class="flex items-center mb-3"><div class="w-6 h-6 text-green-600 mr-2"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg></div><div class="font-medium text-green-800">POST</div></div><div class="text-sm text-green-700"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong>用途:</strong> データを「送信」<br/>
+<strong>例:</strong> フォーム送信、記事投稿</p></div></div></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold"><span class="inline-flex items-center px-2 mr-1 text-sm font-medium bg-slate-400 dark:bg-slate-400/30 text-slate-100 dark:text-slate-900 rounded-full h-full">補足</span> JSONとは</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">JavaScript Object Notation の略</li>
+<li class="relative ml-2">データ交換フォーマットの一種</li>
+<li class="relative ml-2">JavaScriptのオブジェクト記法をベースにした軽量なデータ形式</li>
+</ul><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">// JSON例
+{
+  &quot;name&quot;: &quot;田中太郎&quot;,
+  &quot;age&quot;: 25,
+  &quot;hobbies&quot;: [&quot;読書&quot;, &quot;映画鑑賞&quot;],
+  &quot;address&quot;: {
+    &quot;prefecture&quot;: &quot;東京都&quot;,
+    &quot;city&quot;: &quot;渋谷区&quot;
+  }
+}
+</code></pre></div></div><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong class="font-semibold text-slate-900 dark:text-slate-100">JSONの特徴：</strong></p><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">人間にも読みやすい</li>
+<li class="relative ml-2">多くのプログラミング言語でサポート</li>
+<li class="relative ml-2">Web APIの標準的なデータ形式</li>
+</ul></div></details>
+<h2 class="text-2xl font-semibold mb-3 mt-12 text-slate-800 dark:text-slate-200">Gemini API を使ってみよう！</h2>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">Geminiについて</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">Googleが開発した大規模言語モデル（LLM）</li>
+<li class="relative ml-2">テキスト生成、質問応答、要約、翻訳など多様なAI機能を提供</li>
+<li class="relative ml-2">REST APIを通じてWebアプリケーションから利用可能</li>
+</ul><div class="my-6 p-4 rounded-lg border bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-blue-800 dark:text-blue-200">AIで変わる業務スタイル</div><div class="text-slate-700 dark:text-slate-300"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">Gemini AIを活用することで、文書作成、データ分析、アイデア出しなどの日常業務を大幅に効率化できます。まさに「AIと協働する」新しい働き方の始まりです！</p></div></div></div></div></details>
+<!-- -->
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">Gemini APIの利用料金</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">Gemini APIは <strong class="font-semibold text-slate-900 dark:text-slate-100">無料枠</strong> と <strong class="font-semibold text-slate-900 dark:text-slate-100">従量課金プラン</strong> の2つの料金体系がある</li>
+<li class="relative ml-2">無料枠の場合には、１分間のリクエスト回数制限がある</li>
+</ul><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">※ Gemini 2.5 Flash の場合の試算</p><div class="my-6 "><div class="infographic-content"><div class="grid md:grid-cols-2 gap-6"><div class="bg-slate-50 rounded p-6 border-2 border-green-200"><div class="flex items-center gap-3 mb-4"><div class="w-8 h-8 bg-green-100 rounded flex items-center justify-center"><svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path></svg></div><div><div class="font-bold text-lg text-slate-800">無料枠</div><div class="text-green-600 font-semibold">Free Tier</div></div></div><div class="space-y-2 text-sm text-slate-600"><div>• <strong>リクエスト制限:</strong> 10回/分、250回/日</div><div>• <strong>トークン制限:</strong> 25万トークン/分</div><div>• <strong>用途:</strong> 開発・学習・プロトタイプ</div><div>• <strong>制約:</strong> 商用利用に一部制限</div></div></div><div class="bg-slate-50 rounded p-6 border-2 border-blue-200"><div class="flex items-center gap-3 mb-4"><div class="w-8 h-8 bg-blue-100 rounded flex items-center justify-center"><svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><div><div class="font-bold text-lg text-slate-800">従量課金プラン（Tier1）</div><div class="text-blue-600 font-semibold">Pay-as-you-go</div></div></div><div class="space-y-2 text-sm text-slate-600"><div>• <strong>リクエスト制限:</strong> 1,000回/分、10,000回/日</div><div>• <strong>トークン制限:</strong> 100万トークン/分</div><div>• <strong>入力料金:</strong> $0.30/100万トークン（テキスト/画像/動画）</div><div>• <strong>出力料金:</strong> $2.50/100万トークン</div><div>• <strong>用途:</strong> 本番環境・商用利用</div></div></div></div></div></div><div class="my-6 p-4 rounded-lg border bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-yellow-800 dark:text-yellow-200">最新の利用料金について</div><div class="text-slate-700 dark:text-slate-300"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">本資料の価格表は 2025年9月10日時点のものです。<br/>
+<!-- -->最新の価格とレート制限はこちらから確認できます。</p><div class="my-4 p-4 border border-slate-200 dark:border-slate-700 rounded-lg animate-pulse"><div class="flex gap-3"><div class="w-20 h-20 bg-slate-200 dark:bg-slate-700 rounded"></div><div class="flex-1 space-y-2"><div class="h-4 bg-slate-200 dark:bg-slate-700 rounded w-3/4"></div><div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-1/2"></div><div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-1/3"></div></div></div></div><div class="my-4 p-4 border border-slate-200 dark:border-slate-700 rounded-lg animate-pulse"><div class="flex gap-3"><div class="w-20 h-20 bg-slate-200 dark:bg-slate-700 rounded"></div><div class="flex-1 space-y-2"><div class="h-4 bg-slate-200 dark:bg-slate-700 rounded w-3/4"></div><div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-1/2"></div><div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-1/3"></div></div></div></div></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">APIキーの取得方法</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong class="font-semibold text-slate-900 dark:text-slate-100">1. Google AI Studioにアクセス</strong></p><div class="my-4 p-4 border border-slate-200 dark:border-slate-700 rounded-lg animate-pulse"><div class="flex gap-3"><div class="w-20 h-20 bg-slate-200 dark:bg-slate-700 rounded"></div><div class="flex-1 space-y-2"><div class="h-4 bg-slate-200 dark:bg-slate-700 rounded w-3/4"></div><div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-1/2"></div><div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-1/3"></div></div></div></div><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong class="font-semibold text-slate-900 dark:text-slate-100">2. アカウントでログイン</strong></p><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">Googleアカウントでサインイン</li>
+<li class="relative ml-2">利用規約に同意</li>
+</ul><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong class="font-semibold text-slate-900 dark:text-slate-100">3. APIキーを生成</strong></p><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">「Get API key」をクリック</li>
+<li class="relative ml-2">「Create API key」を選択</li>
+<li class="relative ml-2">生成されたキーをコピーして保存</li>
+</ul><div class="my-6 p-4 rounded-lg border bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-yellow-800 dark:text-yellow-200">APIキーは絶対に秘密に保管！</div><div class="text-slate-700 dark:text-slate-300"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">APIキーは他人に知られると不正利用される可能性があります！絶対に安全な場所に保管してください。</p></div></div></div></div></details>
+<h2 class="text-2xl font-semibold mb-3 mt-12 text-slate-800 dark:text-slate-200">チャットボットアプリの実装</h2>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">axiosでGemini APIを叩いてみよう</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-html !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Gemini Chat&lt;/title&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+    &lt;h1&gt;Gemini AI チャット&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;div id=&quot;chat-area&quot;&gt;
+        &lt;div class=&quot;message ai&quot;&gt;
+            🤖 こんにちは！何でもお聞きください！
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;textarea
+        id=&quot;user-input&quot;
+        placeholder=&quot;メッセージを入力...&quot;
+    &gt;&lt;/textarea&gt;
+    &lt;ul&gt;
+        &lt;li id=&quot;send&quot;&gt;送信&lt;/li&gt;
+        &lt;li id=&quot;clear&quot;&gt;クリア&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/main&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+// APIキーの情報を読み込む
+import { GEMINI_API_KEY } from &quot;./js/config.js&quot;;
+
+let chatHistory = [];
+
+// メッセージ送信
+$(&quot;#send&quot;).on(&quot;click&quot;, function () {
+    const userMessage = $(&quot;#user-input&quot;).val(); // ユーザーメッセージを取得
+    if (!userMessage) return; // ユーザーメッセージが空の場合は処理を終了
+    
+    $(&quot;#chat-area&quot;).append(`&lt;div class=&#x27;message user&#x27;&gt;👤 ${userMessage}&lt;/div&gt;`); // ユーザーメッセージを表示
+    $(&quot;#user-input&quot;).val(&quot;&quot;); // 入力欄をクリア
+
+    // Gemini API を実行する関数を呼び出す
+    callGeminiAPI(userMessage);
+});
+
+// チャットクリア
+$(&quot;#clear&quot;).on(&quot;click&quot;, function () {
+    $(&quot;#chat-area&quot;).html(`&lt;div class=&#x27;message ai&#x27;&gt;🤖 こんにちは！何でもお聞きください！&lt;/div&gt;`); // 初期メッセージをセット
+    chatHistory = []; // 会話履歴をクリア
+});
+
+// Gemini API呼び出し関数
+function callGeminiAPI(message) {
+    // Google AI Studio のAPIリファレンスを参考にURLを設定
+    const url = &quot;https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent&quot;;
+
+    // Gemini APIに渡すデータを作成
+    const data = {
+        contents: [
+            {
+                parts: [{ text: message }],
+            },
+        ],
+    };
+    
+    // Gemini APIを呼び出し
+    axios.post(`${url}?key=${GEMINI_API_KEY}`, data) // URL, データ, クエリパラメータでAPIキー
+        .then(function (response) {
+            // AIの回答を取得
+            const aiResponse = response.data.candidates[0].content.parts[0].text;
+
+            $(&quot;#chat-area&quot;).append(`&lt;div class=&#x27;message ai&#x27;&gt;🤖 ${aiResponse}&lt;/div&gt;`); // AIの回答を表示
+        })
+        .catch(function (error) {
+            console.error(&quot;API Error:&quot;, error); // APIエラーを表示
+            $(&quot;#chat-area&quot;).append(`&lt;div class=&quot;message ai&quot;&gt;🤖 エラーが発生しました。API キーを確認してください。&lt;/div&gt;`);
+        });
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div><details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold"><span class="inline-flex items-center px-2 mr-1 text-sm font-medium bg-slate-400 dark:bg-slate-400/30 text-slate-100 dark:text-slate-900 rounded-full h-full">補足</span> APIキーの管理方法</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong class="font-semibold text-slate-900 dark:text-slate-100">js/config.js ファイルを作成：</strong></p><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">// js/config.js
+export const GEMINI_API_KEY = &quot;YOUR_API_KEY_HERE&quot;; // 実際のAPIキーに置き換える
+</code></pre></div></div><div class="my-6 p-4 rounded-lg border bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-yellow-800 dark:text-yellow-200">APIキーの取り扱い注意</div><div class="text-slate-700 dark:text-slate-300"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">APIキーは絶対に公開しないでください</li>
+<li class="relative ml-2">GitHubにアップする際は<code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">.gitignore</code>に<code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">js/config.js</code>を追加</li>
+<li class="relative ml-2">本番環境では環境変数を使用しましょう</li>
+</ul></div></div></div></div></details><div class="my-6 "><div class="infographic-content"><div class="space-y-3"><div class="flex items-start p-3 bg-blue-50 rounded border border-blue-200"><div class="w-6 h-6 text-blue-600 mr-3 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg></div><div><div class="font-medium text-slate-800">1. ユーザー入力</div><div class="text-sm text-slate-600">テキストエリアからメッセージを取得</div></div></div><div class="flex items-start p-3 bg-orange-50 rounded border border-orange-200"><div class="w-6 h-6 text-orange-600 mr-3 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div><div><div class="font-medium text-slate-800">2. API呼び出し</div><div class="text-sm text-slate-600">axiosでGemini APIにリクエスト送信</div></div></div><div class="flex items-start p-3 bg-green-50 rounded border border-green-200"><div class="w-6 h-6 text-green-600 mr-3 mt-0.5"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><div><div class="font-medium text-slate-800">3. レスポンス処理</div><div class="text-sm text-slate-600">AIの回答を画面に表示</div></div></div></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">ライブラリでGemini APIを使ってみよう</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2"><code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">@google/genai</code> ライブラリを使うと、Gemini APIを簡単に使える</li>
+</ul><div class="my-6 p-4 rounded-lg border bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-green-800 dark:text-green-200">ライブラリを使う利点</div><div class="text-slate-700 dark:text-slate-300"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">URLを覚えなくて良い</li>
+<li class="relative ml-2">データ形式を気にしなくて良い</li>
+<li class="relative ml-2">エラーハンドリングが簡単</li>
+<li class="relative ml-2">最新のAPI仕様に自動対応</li>
+</ul></div></div></div><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">同じチャット機能をライブラリで実装:</p><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-html !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Gemini Chat - ライブラリ版&lt;/title&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+    &lt;h1&gt;Gemini AI チャット | ライブラリ版&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;div id=&quot;chat-area&quot;&gt;
+        &lt;div class=&quot;message ai&quot;&gt;
+            🤖 こんにちは！何でもお聞きください！
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;textarea
+        id=&quot;user-input&quot;
+        placeholder=&quot;メッセージを入力...&quot;
+    &gt;&lt;/textarea&gt;
+    &lt;ul&gt;
+        &lt;li id=&quot;send&quot;&gt;送信&lt;/li&gt;
+        &lt;li id=&quot;clear&quot;&gt;クリア&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/main&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+// APIキーの情報を読み込む
+import { GEMINI_API_KEY } from &#x27;./js/config.js&#x27;;
+
+// 🔥 @google/genai ライブラリを読み込む
+import { GoogleGenAI } from &#x27;https://cdn.jsdelivr.net/npm/@google/genai&#x27;;
+
+// @google/genai ライブラリを初期化
+const genAI = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+
+let chatHistory = [];
+
+// メッセージ送信
+$(&#x27;#send&#x27;).on(&#x27;click&#x27;, function () {
+    const userMessage = $(&#x27;#user-input&#x27;).val();
+    if (!userMessage) return;
+
+    $(&#x27;#chat-area&#x27;).append(`&lt;div class=&#x27;message user&#x27;&gt;👤 ${userMessage}&lt;/div&gt;`);
+    $(&#x27;#user-input&#x27;).val(&#x27;&#x27;);
+
+    // Gemini API を実行する関数を呼び出す
+    callGeminiAPI(userMessage);
+});
+
+// チャットクリア
+$(&#x27;#clear&#x27;).on(&#x27;click&#x27;, function () {
+    $(&#x27;#chat-area&#x27;).html(`&lt;div class=&#x27;message ai&#x27;&gt;🤖 こんにちは！何でもお聞きください！&lt;/div&gt;`);
+    chatHistory = [];
+});
+
+// Gemini API呼び出し関数
+function callGeminiAPI(message) {
+
+    // 🔥 @google/genai ライブラリを使用して Gemini API を呼び出す
+    genAI.models
+        .generateContent({
+            model: &#x27;gemini-2.5-flash&#x27;,
+            contents: message,
+        })
+        .then(function (response) {
+            const aiResponse = response.text; // 🔥 AIの回答を取得
+            $(&#x27;#chat-area&#x27;).append(`&lt;div class=&#x27;message ai&#x27;&gt;🤖 ${aiResponse}&lt;/div&gt;`);
+        })
+        .catch(function (error) {
+            console.error(&#x27;API Error:&#x27;, error);
+            $(&#x27;#chat-area&#x27;).append(`&lt;div class=&quot;message ai&quot;&gt;🤖 エラーが発生しました。API キーを確認してください。&lt;/div&gt;`);
+        });
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div><div class="my-6 "><div class="infographic-content"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="p-4 bg-blue-50 rounded border border-blue-200"><div class="text-center mb-3"><div class="font-medium text-blue-800">axios版（JSON型）</div></div><div class="text-sm text-blue-700 space-y-2"><div>✓ URLを自分で管理</div><div>✓ データ形式を理解が必要</div><div>✓ 細かい制御が可能</div><div>✗ 設定が複雑</div></div></div><div class="p-4 bg-green-50 rounded border border-green-200"><div class="text-center mb-3"><div class="font-medium text-green-800">ライブラリ版</div></div><div class="text-sm text-green-700 space-y-2"><div>✓ 設定が簡単</div><div>✓ URLを覚える必要なし</div><div>✓ 最新仕様に自動対応</div><div>✗ ライブラリの読み込みが必要</div></div></div></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">発展: ストリーミング読み込み</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><div class="my-6 p-4 rounded-lg border bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-blue-800 dark:text-blue-200">ストリーミングとは？</div><div class="text-slate-700 dark:text-slate-300"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">通常のAPIは「全部考えてから一気に回答」ですが、ストリーミングは「考えながら順次表示」します。<br/>
+<!-- -->ChatGPTのように文字が徐々に現れる感じです！</p></div></div></div><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-html !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Gemini Chat - ストリーミング版&lt;/title&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+    &lt;h1&gt;Gemini AI チャット | ストリーミング版&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;div id=&quot;chat-area&quot;&gt;
+        &lt;div class=&quot;message ai&quot;&gt;
+            🤖 こんにちは！何でもお聞きください！
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;textarea
+        id=&quot;user-input&quot;
+        placeholder=&quot;メッセージを入力...&quot;
+    &gt;&lt;/textarea&gt;
+    &lt;ul&gt;
+        &lt;li id=&quot;send&quot;&gt;送信&lt;/li&gt;
+        &lt;li id=&quot;clear&quot;&gt;クリア&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/main&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+// APIキーの情報を読み込む
+import { GEMINI_API_KEY } from &#x27;./js/config.js&#x27;;
+
+// @google/genai ライブラリを読み込む
+import { GoogleGenAI } from &#x27;https://cdn.jsdelivr.net/npm/@google/genai&#x27;;
+
+// @google/genai ライブラリを初期化
+const genAI = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+
+let chatHistory = [];
+
+// メッセージ送信
+$(&#x27;#send&#x27;).on(&#x27;click&#x27;, function () {
+    const userMessage = $(&#x27;#user-input&#x27;).val();
+    if (!userMessage) return;
+
+    $(&#x27;#chat-area&#x27;).append(`&lt;div class=&#x27;message user&#x27;&gt;👤 ${userMessage}&lt;/div&gt;`);
+    $(&#x27;#user-input&#x27;).val(&#x27;&#x27;);
+
+    // Gemini API を実行する関数を呼び出す
+    callGeminiAPI(userMessage);
+});
+
+// チャットクリア
+$(&#x27;#clear&#x27;).on(&#x27;click&#x27;, function () {
+    $(&#x27;#chat-area&#x27;).html(`&lt;div class=&#x27;message ai&#x27;&gt;🤖 こんにちは！何でもお聞きください！&lt;/div&gt;`);
+    chatHistory = [];
+});
+
+// Gemini API ストリーミング呼び出し関数
+async function callGeminiAPI(message) {
+
+    // AIメッセージの枠を先に作成
+    const aiMessageId = `ai-message-${Date.now()}`;
+    $(&#x27;#chat-area&#x27;).append(
+        `&lt;div class=&#x27;message ai&#x27; id=&#x27;${aiMessageId}&#x27;&gt;🤖 &lt;span class=&quot;typing-indicator&quot;&gt;考え中...&lt;/span&gt;&lt;/div&gt;`
+    );
+
+    try {
+        // ストリーミングでレスポンスを取得
+        const responseStream = await genAI.models.generateContentStream({
+            model: &#x27;gemini-2.5-flash&#x27;,
+            contents: message,
+            config: { thinkingConfig: { thinkingBudget: 0 } } // ストリーミングをわかりやすくするために思考時間を0にする
+        });
+
+        // タイピングインジケーターを削除
+        $(`#${aiMessageId} .typing-indicator`).remove();
+
+        let aiResponse = &#x27;&#x27;;
+
+        // ストリームからデータを逐次取得
+        for await (const chunk of responseStream) {
+            aiResponse += chunk.text;
+
+            // リアルタイムでテキストを更新
+            $(`#${aiMessageId}`).html(
+                `🤖 ${aiResponse}&lt;span class=&quot;cursor&quot;&gt;|&lt;/span&gt;`
+            );
+
+            // チャットエリアを最下部にスクロール
+            $(&#x27;#chat-area&#x27;).scrollTop(
+                $(&#x27;#chat-area&#x27;)[0].scrollHeight
+            );
+        }
+
+        // 最終的にカーソルを削除
+        $(`#${aiMessageId} .cursor`).remove();
+    } catch (error) {
+        console.error(&#x27;API Error:&#x27;, error);
+        $(`#${aiMessageId}`).html(
+            `🤖 エラーが発生しました。API キーを確認してください。`
+        );
+    }
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div><details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold"><span class="inline-flex items-center px-2 mr-1 text-sm font-medium bg-slate-400 dark:bg-slate-400/30 text-slate-100 dark:text-slate-900 rounded-full h-full">補足</span> ストリーミングの仕組み</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">ストリーミングでは以下のような処理が行われています：</p><ol class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-decimal">
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">メッセージ枠を先に作成</strong>: 空のメッセージ枠を用意</li>
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">ストリーム開始</strong>: <code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">generateContentStream</code>でストリーミングを開始</li>
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">逐次受信</strong>: <code class="inline-block px-1.5 py-0.5 mx-0.5 text-sm font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded border border-slate-200 dark:border-slate-700">for await</code>でチャンクごとにデータを受信</li>
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">リアルタイム更新</strong>: 受信したテキストを即座に表示</li>
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">スクロール調整</strong>: 新しいテキストが見えるように自動スクロール</li>
+</ol><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">// ストリーミングの核となる部分
+for await (const chunk of responseStream) {
+    aiResponse += chunk.text;  // 受信したテキストを追加
+    
+    // リアルタイムで画面を更新
+    $(`#${aiMessageId}`).html(`🤖 ${aiResponse}&lt;span class=&quot;cursor&quot;&gt;|&lt;/span&gt;`);
+    
+    // 自動スクロール
+    $(&#x27;#chat-area&#x27;).scrollTop($(&#x27;#chat-area&#x27;)[0].scrollHeight);
+}
+</code></pre></div></div></div></details></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold">応用例：他のAPIとの組み合わせ</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">例: <strong class="font-semibold text-slate-900 dark:text-slate-100">位置情報API</strong>と<strong class="font-semibold text-slate-900 dark:text-slate-100">Gemini API</strong>を組み合わせた観光ガイドアプリ</p><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-html !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;AI 観光ガイド&lt;/title&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- Bulma CSS --&gt;
+    &lt;link
+        rel=&quot;stylesheet&quot;
+        href=&quot;https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css&quot;
+    /&gt;
+    &lt;!-- Font Awesome for icons --&gt;
+    &lt;link
+        rel=&quot;stylesheet&quot;
+        href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot;
+    /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;container mt-5&quot;&gt;
+    &lt;div class=&quot;columns is-centered&quot;&gt;
+        &lt;div class=&quot;column is-8&quot;&gt;
+            &lt;!-- Location Status --&gt;
+            &lt;div
+                class=&quot;notification is-primary is-light&quot;
+                id=&quot;location-info&quot;
+            &gt;
+                &lt;p id=&quot;location-status&quot;&gt;
+                    &lt;i class=&quot;fas fa-spinner fa-pulse&quot;&gt;&lt;/i&gt;
+                    位置情報を取得中...
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Chat Area --&gt;
+            &lt;div class=&quot;box&quot;&gt;
+                &lt;div
+                    id=&quot;chat-area&quot;
+                    style=&quot;
+                        height: 400px;
+                        overflow-y: auto;
+                        padding: 1rem;
+                    &quot;
+                &gt;
+                    &lt;div class=&quot;message is-info&quot;&gt;
+                        &lt;div class=&quot;message-body&quot;&gt;
+                            &lt;i class=&quot;fas fa-robot&quot;&gt;&lt;/i&gt;
+                            こんにちは！現在位置を取得して、おすすめの観光スポットをご案内します！
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Button Area --&gt;
+            &lt;div class=&quot;field is-grouped is-grouped-centered&quot;&gt;
+                &lt;p class=&quot;control&quot;&gt;
+                    &lt;button
+                        class=&quot;button is-primary is-medium&quot;
+                        id=&quot;get-location&quot;
+                    &gt;
+                        &lt;span class=&quot;icon&quot;&gt;
+                            &lt;i class=&quot;fas fa-location-arrow&quot;&gt;&lt;/i&gt;
+                        &lt;/span&gt;
+                        &lt;span&gt;現在位置で観光案内&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+// APIキーの情報を読み込む
+import { GEMINI_API_KEY } from &#x27;./js/config.js&#x27;;
+
+let currentLocation = null;
+
+// 現在位置取得ボタン
+$(&#x27;#get-location&#x27;).on(&#x27;click&#x27;, function () {
+    if (currentLocation) {
+        // 位置情報がある場合は観光案内を開始
+        startTourGuide();
+    } else {
+        // 位置情報がない場合は取得してから観光案内
+        getCurrentLocation(true);
+    }
+});
+
+// 現在位置を取得する関数
+function getCurrentLocation(startGuideAfter = false) {
+    $(&#x27;#location-info&#x27;)
+        .removeClass(&#x27;is-primary is-success is-danger&#x27;)
+        .addClass(&#x27;is-info&#x27;);
+    $(&#x27;#location-status&#x27;).html(
+        &#x27;&lt;i class=&quot;fas fa-spinner fa-pulse&quot;&gt;&lt;/i&gt; 位置情報を取得中...&#x27;
+    );
+
+    if (!navigator.geolocation) {
+        $(&#x27;#location-info&#x27;)
+            .removeClass(&#x27;is-info&#x27;)
+            .addClass(&#x27;is-danger&#x27;);
+        $(&#x27;#location-status&#x27;).html(
+            &#x27;&lt;i class=&quot;fas fa-times&quot;&gt;&lt;/i&gt; お使いのブラウザは位置情報に対応していません&#x27;
+        );
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+        function (position) {
+            // 位置情報取得成功
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            currentLocation = { lat, lng };
+
+            $(&#x27;#location-info&#x27;)
+                .removeClass(&#x27;is-info&#x27;)
+                .addClass(&#x27;is-success&#x27;);
+            $(&#x27;#location-status&#x27;).html(
+                `&lt;i class=&quot;fas fa-map-marker-alt&quot;&gt;&lt;/i&gt; 現在位置: 緯度 ${lat.toFixed(4)}, 経度 ${lng.toFixed(4)}`
+            );
+
+            // ボタンが押された場合のみ観光案内を開始
+            if (startGuideAfter) {
+                startTourGuide();
+            }
+        },
+        function (error) {
+            // 位置情報取得失敗
+            $(&#x27;#location-info&#x27;)
+                .removeClass(&#x27;is-info&#x27;)
+                .addClass(&#x27;is-danger&#x27;);
+            $(&#x27;#location-status&#x27;).html(
+                &#x27;&lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; 位置情報の取得に失敗しました&#x27;
+            );
+        }
+    );
+}
+
+// 観光案内を開始する関数
+function startTourGuide() {
+    if (!currentLocation) {
+        alert(&#x27;位置情報が取得できていません&#x27;);
+        return;
+    }
+
+    const locationPrompt = `
+        現在位置の緯度経度情報: ${currentLocation.lat}, ${currentLocation.lng}
+
+        この位置周辺のおすすめ観光スポットを教えてください。以下の形式で回答してお願いします：
+
+        🏛️ **観光スポット名**
+        - 📍 場所・アクセス方法
+        - ⏰ 営業時間・料金
+        - 🌟 おすすめポイント
+        - 📸 見どころ
+
+        できれば3-5箇所程度、徒歩や電車でアクセスしやすい場所を中心に紹介してください。
+        地元の人しか知らない穴場スポットがあれば、それも含めてください！
+    `;
+
+    $(&#x27;#chat-area&#x27;).append(`
+        &lt;div class=&quot;message is-warning&quot;&gt;
+            &lt;div class=&quot;message-body&quot;&gt;
+                &lt;i class=&quot;fas fa-location-arrow&quot;&gt;&lt;/i&gt; 現在位置での観光案内をお願いします
+            &lt;/div&gt;
+        &lt;/div&gt;
+    `);
+
+    callGeminiAPI(locationPrompt);
+}
+
+// Gemini API呼び出し関数
+function callGeminiAPI(message) {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+
+    // ローディング表示
+    $(&#x27;#chat-area&#x27;).append(`
+        &lt;div class=&quot;message is-info&quot;&gt;
+            &lt;div class=&quot;message-body&quot;&gt;
+                &lt;i class=&quot;fas fa-spinner fa-pulse&quot;&gt;&lt;/i&gt; 観光情報を検索中...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    `);
+
+    axios
+        .post(url, {
+            contents: [
+                {
+                    parts: [{ text: message }],
+                },
+            ],
+        })
+        .then(function (response) {
+            // ローディングメッセージを削除
+            $(&#x27;#chat-area .message:last&#x27;).remove();
+
+            const aiResponse =
+                response.data.candidates[0].content.parts[0].text;
+            $(&#x27;#chat-area&#x27;).append(`
+                &lt;div class=&quot;message is-success&quot;&gt;
+                    &lt;div class=&quot;message-body&quot;&gt;
+                        &lt;i class=&quot;fas fa-robot&quot;&gt;&lt;/i&gt; ${aiResponse.replace(/\n/g, &#x27;&lt;br&gt;&#x27;)}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            `);
+            $(&#x27;#chat-area&#x27;).scrollTop(
+                $(&#x27;#chat-area&#x27;)[0].scrollHeight
+            );
+        })
+        .catch(function (error) {
+            // ローディングメッセージを削除
+            $(&#x27;#chat-area .message:last&#x27;).remove();
+
+            console.error(&#x27;API Error:&#x27;, error);
+            $(&#x27;#chat-area&#x27;).append(`
+                &lt;div class=&quot;message is-danger&quot;&gt;
+                    &lt;div class=&quot;message-body&quot;&gt;
+                        &lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; エラーが発生しました。API キーを確認してください。
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            `);
+        });
+}
+
+// ページ読み込み時に位置情報取得を開始（観光案内は手動）
+$(document).ready(function () {
+    // 自動で位置情報取得を開始（観光案内はしない）
+    setTimeout(() =&gt; getCurrentLocation(false), 1000);
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div><div class="my-6 p-4 rounded-lg border bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-emerald-800 dark:text-emerald-200">複数のAPIを組み合わせる利点</div><div class="text-slate-700 dark:text-slate-300"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">位置情報API</strong>: ユーザーの現在位置を取得</li>
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">Gemini API</strong>: その位置に基づいた観光情報を生成</li>
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">結果</strong>: パーソナライズされた観光ガイドアプリの完成！</li>
+</ul></div></div></div></div></details>
+<details class="rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-4 my-4 hover:shadow transition outline-none focus:ring-0 focus:outline-none"><summary class="cursor-pointer select-none text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-bold"><span class="inline-flex items-center px-2 mr-1 text-sm font-medium bg-slate-400 dark:bg-slate-400/30 text-slate-100 dark:text-slate-900 rounded-full h-full">補足</span>セキュリティについて</summary><div class="mt-6 text-slate-600 dark:text-slate-400"><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">今回の例では<strong class="font-semibold text-slate-900 dark:text-slate-100">フロントエンドで直接APIを叩いて</strong>いますが、これは<strong class="font-semibold text-slate-900 dark:text-slate-100">学習・内部利用</strong>に限定してください！</p><div class="my-6 p-4 rounded-lg border bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-yellow-800 dark:text-yellow-200">フロントエンドでのAPI利用の注意点</div><div class="text-slate-700 dark:text-slate-300"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2">APIキーがブラウザに露出してしまう</li>
+<li class="relative ml-2">悪意のあるユーザーがAPIキーを盗む可能性</li>
+<li class="relative ml-2">一般公開するアプリでは絶対に避ける</li>
+</ul></div></div></div><div class="my-6 "><div class="infographic-content"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="p-4 bg-green-50 rounded border border-green-200"><div class="flex items-center mb-3"><div class="w-6 h-6 text-green-600 mr-2"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><div class="font-medium text-green-800">学習・内部利用</div></div><div class="text-sm text-green-700 space-y-2"><div>✓ 個人の学習用途</div><div>✓ 社内ツール</div><div>✓ プロトタイプ作成</div><div>✓ 限定された環境</div></div></div><div class="p-4 bg-red-50 rounded border border-red-200"><div class="flex items-center mb-3"><div class="w-6 h-6 text-red-600 mr-2"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></div><div class="font-medium text-red-800">一般公開アプリ</div></div><div class="text-sm text-red-700 space-y-2"><div>✗ Webサイトの公開</div><div>✗ モバイルアプリ配布</div><div>✗ 不特定多数の利用</div><div>✗ 商用サービス</div></div></div></div></div></div><h3 class="text-xl font-semibold mb-2 mt-5 text-slate-700 dark:text-slate-300">一般公開する場合の正しい方法</h3><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed">一般公開するアプリを作る場合は、<strong class="font-semibold text-slate-900 dark:text-slate-100">バックエンド</strong>でAPIを呼び出しましょう：</p><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">// ❌ フロントエンドで直接API呼び出し（公開アプリでは危険）
+const response = await axios.post(geminiUrl, data, {
+    headers: { &#x27;x-goog-api-key&#x27;: GEMINI_API_KEY }  // APIキーが露出！
+});
+
+// ✅ バックエンドを経由してAPI呼び出し（安全）
+const response = await axios.post(&#x27;/api/chat&#x27;, {  // 自分のサーバーに送信
+    message: userMessage
+});
+</code></pre></div></div><p class="my-2 text-slate-700 dark:text-slate-300 leading-relaxed"><strong class="font-semibold text-slate-900 dark:text-slate-100">バックエンドの例（Node.js/Express）:</strong></p><div><div class="group relative my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700"><button class="absolute right-2 top-2 rounded bg-slate-800/70 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 z-10">コピー</button><pre class="language-javascript !m-0 !p-4 !bg-slate-900 dark:!bg-slate-950 !text-slate-100 overflow-x-auto"><code class="language-javascript">// server.js
+app.post(&#x27;/api/chat&#x27;, async (req, res) =&gt; {
+    try {
+        // サーバー側でGemini APIを呼び出し
+        const geminiResponse = await axios.post(geminiUrl, {
+            contents: [{ parts: [{ text: req.body.message }] }]
+        }, {
+            headers: { &#x27;x-goog-api-key&#x27;: process.env.GEMINI_API_KEY }  // 環境変数で管理
+        });
+        
+        res.json({ response: geminiResponse.data });
+    } catch (error) {
+        res.status(500).json({ error: &#x27;API Error&#x27; });
+    }
+});
+</code></pre></div></div><div class="my-6 p-4 rounded-lg border bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800 flex gap-3"><div class="flex-shrink-0"><svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><div class="flex-1 min-w-0"><div class="font-semibold mb-1 text-blue-800 dark:text-blue-200">まとめ</div><div class="text-slate-700 dark:text-slate-300"><ul class="mb-4 space-y-1 text-slate-700 dark:text-slate-300 pl-6 list-disc">
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">学習段階</strong>: フロントエンドで直接APIを使ってOK</li>
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">本格運用</strong>: バックエンドでAPIを呼び出してセキュリティを確保</li>
+<li class="relative ml-2"><strong class="font-semibold text-slate-900 dark:text-slate-100">APIキー</strong>: 常に安全に管理し、絶対に公開しない</li>
+</ul></div></div></div></div></details></div><div></div></div></main></div></div><script>((storageKey2, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({ key }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(storageKey2) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(storageKey2);
+    }
+  })("react-router-scroll-positions", null)</script><script>window.__reactRouterContext = {"basename":"/","future":{"unstable_middleware":false,"unstable_optimizeDeps":false,"unstable_splitRouteModules":false,"unstable_subResourceIntegrity":false,"unstable_viteEnvironmentApi":false},"routeDiscovery":{"mode":"initial"},"ssr":false,"isSpaMode":false};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script type="module" async="">import "/assets/manifest-28150284.js";
+import * as route0 from "/assets/root-D-3MPHUJ.js";
+import * as route1 from "/assets/lessons._slug-3tazfXQY.js";
+  
+  window.__reactRouterRouteModules = {"root":route0,"routes/lessons.$slug":route1};
+
+import("/assets/entry.client-DtWayQEr.js");</script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script><!--$?--><template id="B:0"></template><!--/$--><div hidden id="S:0"><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":-5},\"loaderData\",{},\"actionData\",\"errors\"]\n");</script><!--$?--><template id="B:1"></template><!--/$--></div><script>$RC=function(b,c,e){c=document.getElementById(c);c.parentNode.removeChild(c);var a=document.getElementById(b);if(a){b=a.previousSibling;if(e)b.data="$!",a.setAttribute("data-dgst",e);else{e=b.parentNode;a=b.nextSibling;var f=0;do{if(a&&8===a.nodeType){var d=a.data;if("/$"===d)if(0===f)break;else f--;else"$"!==d&&"$?"!==d&&"$!"!==d||f++}d=a.nextSibling;e.removeChild(a);a=d}while(a);for(;c.firstChild;)e.insertBefore(c.firstChild,a);b.data="$"}b._reactRetry&&b._reactRetry()}};$RC("B:0","S:0")</script><div hidden id="S:1"><script>window.__reactRouterContext.streamController.close();</script></div><script>$RC("B:1","S:1")</script></body></html>
